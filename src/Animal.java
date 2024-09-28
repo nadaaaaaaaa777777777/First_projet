@@ -14,7 +14,9 @@ public class Animal {
     }
 
 
+
+
 @Override
 public String toString( ){
-    return "Name"   +name  + ",Family:"  +family+",Age" +age+",Is mammal" + isMammal ;}
+    return "name"   +name  + ",family:"  +family+",age" +age+",is mammal" + isMammal ;}
 }
