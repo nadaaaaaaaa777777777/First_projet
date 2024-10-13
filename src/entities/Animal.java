@@ -8,6 +8,9 @@ public class Animal {
     Boolean isMammal;
 
 
+    public Animal() {
+    }
+
     public Animal(String family, String name, int age, boolean isMammal){
         this.family = family;
         this.name = name;

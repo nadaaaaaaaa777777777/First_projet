@@ -6,8 +6,28 @@ public class Main {
         Animal lion = new Animal("FFFF", "Lion", 5, true);
         Animal tiger = new Animal("Felidae", "Tiger", 4, true);
         Animal elephant = new Animal("Elephantidae", "Elephant", 10, true);
+        Dolphin dolphin = new Dolphin("Delphinidae", "Dolphin", 8, true, "Ocean", 25.5f);
+        Terrestre cheetah = new Terrestre("Felidae", "Cheetah", 6, true, 4);
+        Aquatic aquatic = new Aquatic("Pisces", "Shark", 12, false, "Ocean");
+         Penguin penguin = new Penguin("Spheniscidae", "Penguin", 3, true, "Arctic", 5.0f);
 
-        Animal[] animals = {lion};
+        System.out.println(lion);
+        System.out.println(tiger);
+        System.out.println(elephant);
+        System.out.println(dolphin);
+        System.out.println(cheetah);
+        Zoo zoo1 = new Zoo("Central Zoo", "Tunis");
+
+        zoo1.addAnimal(lion);
+        zoo1.addAnimal(tiger);
+        zoo1.addAnimal(elephant);
+        zoo1.addAnimal(dolphin);
+        zoo1.addAnimal(cheetah);
+        zoo1.displayAnimals();
+        aquatic.swim();
+        dolphin.swim();
+        penguin.swim();
+        /*Animal[] animals = {lion};
 
 
         Zoo zoo1 = new Zoo("Central Zoo", "Tunis");
@@ -28,6 +48,6 @@ public class Main {
         System.out.println("Ajouter  un aniaml : " + zoo1.addAnimal(Lion1));
 
         System.out.println("supprimer aniaml: " + zoo1.removeAnimal(tiger));
-        zoo1.displayAnimals();
+        zoo1.displayAnimals();*/
     }
 }
