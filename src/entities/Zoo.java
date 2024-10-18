@@ -1,16 +1,19 @@
 package entities;
 
 public class Zoo {
-     protected Animal[] animals;
-     protected String name;
+    protected Animal[] animals;
+    protected String name;
     protected String city;
     protected  final int nbrCages = 25;
     protected int animalCount;
+    protected Aquatic[] aquaticanimals;
+
 
     public Zoo(String name, String city) {
         this.name = name;
         this.city = city;
         this.animals = new Animal[nbrCages];
+        this.aquaticanimals = new Aquatic[10];
     }
 
     public Animal[] getAnimals() {
@@ -103,7 +106,18 @@ public class Zoo {
         }
     }
 
-    // Only one definition of isZooFull
+
+    public boolean addAquaticAnimal(Aquatic animal) {
+        for (int i = 0; i < aquaticanimals.length; i++) {
+            if (aquaticanimals[i] == null) {
+                aquaticanimals[i] = animal;
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     public boolean isZooFull() {
         return animalCount >= animals.length;
     }
@@ -116,4 +130,40 @@ public class Zoo {
     public String toString() {
         return "name: " + name + ", city: " + city + ", nbrcages: " + nbrCages;
     }
+
+    public float maxPenguinSwimmingDepth() {
+        float maxDepth = 0;
+
+        for (Aquatic aquatic : aquaticanimals) {
+            if (aquatic instanceof Penguin) {
+                Penguin penguin = (Penguin) aquatic;
+                if (penguin.getSwimmingDepth() > maxDepth) {
+                    maxDepth = penguin.getSwimmingDepth();
+                }
+            }
+        }
+
+        return maxDepth;
+    }
+
+
+    public void displayNumberOfAquaticsByType() {
+        int dolphinCount = 0;
+        int penguinCount = 0;
+
+        for (Aquatic aquatic : aquaticanimals) {
+            if (aquatic instanceof Dolphin) {
+                dolphinCount++;
+            } else if (aquatic instanceof Penguin) {
+                penguinCount++;
+            }
+        }
+
+        System.out.println("Nombre de dauphins: " + dolphinCount);
+        System.out.println("Nombre de pingouins: " + penguinCount);
+    }
+
+
+
+
 }

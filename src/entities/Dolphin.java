@@ -9,6 +9,7 @@ public class Dolphin extends Aquatic{
     public  Dolphin(){
 
     }
+    @Override
     public void  swim (){
         System.out.println("This dolphin is swimming");
     }
