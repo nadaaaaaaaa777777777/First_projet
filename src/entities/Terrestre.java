@@ -12,7 +12,7 @@ public class Terrestre extends Animal {
 
     @Override
     public String toString() {
-        return super.toString() + " Number of legs: " + this.nbrlegs;
+        return super.toString() + " Number of legs: " + nbrlegs;
     }
 
 

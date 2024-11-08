@@ -3,29 +3,31 @@ import entities.*;
 
 public class Main {
     public static void main(String[] args) {
-        Animal lion = new Animal("FFFF", "Lion", 5, true);
-        Animal tiger = new Animal("Felidae", "Tiger", 4, true);
-        Animal elephant = new Animal("Elephantidae", "Elephant", 10, true);
-        Dolphin dolphin = new Dolphin("Delphinidae", "Dolphin", 8, true, "Ocean", 25.5f);
-        Terrestre cheetah = new Terrestre("Felidae", "Cheetah", 6, true, 4);
-       // Aquatic aquatic = new Aquatic("Pisces", "Shark", 12, false, "Ocean");
-        Penguin penguin1 = new Penguin("Spheniscidae", "Penguin1", 3, true, "Arctique", 5.0f);
-        Penguin penguin2 = new Penguin("Spheniscidae", "Penguin2", 4, true, "Arctique", 9.0f);
-        Penguin penguin3 = new Penguin("Spheniscidae", "Penguin1", 3, true, "Arctique", 5.0f);
+        try {
 
-        /*System.out.println(lion);
-        System.out.println(tiger);
-        System.out.println(elephant);
-        System.out.println(dolphin);
-        System.out.println(cheetah);*/
-        Zoo zoo1 = new Zoo("Central Zoo", "Tunis");
 
-        /*zoo1.addAnimal(lion);
-        zoo1.addAnimal(tiger);
-        zoo1.addAnimal(elephant);
-        zoo1.addAnimal(dolphin);
-        zoo1.addAnimal(cheetah);
-        zoo1.displayAnimals();*/
+                Animal lion = new Animal("FFFF", "Lion", 5, true);
+               lion.setAge(5);
+            Animal tiger = new Animal("Felidae", "Tiger", 4, true);
+               tiger.setAge(4);
+                Animal elephant = new Animal("Elephantidae", "Elephant", 10, true);
+                Dolphin dolphin = new Dolphin("Delphinidae", "Dolphin", 8, true, "Ocean", 25.5f);
+                Terrestre cheetah = new Terrestre("Felidae", "Cheetah", 6, true, 4);
+                // Aquatic aquatic = new Aquatic("Pisces", "Shark", 12, false, "Ocean");
+                Penguin penguin1 = new Penguin("Spheniscidae", "Penguin1", 3, true, "Arctique", 5.0f);
+                Penguin penguin2 = new Penguin("Spheniscidae", "Penguin2", 4, true, "Arctique", 9.0f);
+                Penguin penguin3 = new Penguin("Spheniscidae", "Penguin1", 3, true, "Arctique", 5.0f);
+
+
+                Zoo zoo1 = new Zoo("Central Zoo", "Tunis");
+
+                zoo1.addAnimal(lion);
+                zoo1.addAnimal(tiger);
+                zoo1.addAnimal(elephant);
+                zoo1.addAnimal(dolphin);
+                zoo1.addAnimal(cheetah);
+                zoo1.displayAnimals();
+        /*
         zoo1.addAquaticAnimal(dolphin);
         zoo1.addAquaticAnimal(penguin1);
         zoo1.addAquaticAnimal(penguin2);
@@ -64,5 +66,10 @@ public class Main {
 
         System.out.println("supprimer aniaml: " + zoo1.removeAnimal(tiger));
         zoo1.displayAnimals();*/
+            } catch (ZooFullException e){
+                System.out.println(e.getMessage());
+        }    catch (InvalidAgeExeception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

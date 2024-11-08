@@ -1,10 +1,11 @@
 package entities;
 
+
 public class Zoo {
     protected Animal[] animals;
     protected String name;
     protected String city;
-    protected  final int nbrCages = 25;
+    protected  final int nbrCages = 3;
     protected int animalCount;
     protected Aquatic[] aquaticanimals;
 
@@ -71,18 +72,19 @@ public class Zoo {
         return -1;
     }
 
-    public boolean addAnimal(Animal animal) {
+    public void addAnimal(Animal animal) throws ZooFullException {
         if (isZooFull()) {
+            throw new ZooFullException("le Zoo Full");
 
-            return false;
+
         }
         if (this.searchAnimal(animal.name) == -1) {
             animals[animalCount] = animal;
             animalCount++;
-            return true;
+            System.out.println("animal a été ajouté."+animalCount);
         } else {
 
-            return false;
+            System.out.println("animal n'a pas été ajouté.");
         }
     }
 

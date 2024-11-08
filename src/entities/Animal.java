@@ -39,10 +39,10 @@ public class Animal {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws InvalidAgeExeception {
         if (age < 0) {
 
-            System.out.println("l'âge doit etre positive");
+            throw new InvalidAgeExeception("le âge doit etre positive");
         } else {
             this.age = age;
         }
