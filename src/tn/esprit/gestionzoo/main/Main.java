@@ -1,6 +1,7 @@
 package tn.esprit.gestionzoo.main;
 import entities.*;
 
+
 public class Main {
     public static void main(String[] args) {
         try {
@@ -17,7 +18,9 @@ public class Main {
                 Penguin penguin1 = new Penguin("Spheniscidae", "Penguin1", 3, true, "Arctique", 5.0f);
                 Penguin penguin2 = new Penguin("Spheniscidae", "Penguin2", 4, true, "Arctique", 9.0f);
                 Penguin penguin3 = new Penguin("Spheniscidae", "Penguin1", 3, true, "Arctique", 5.0f);
-
+                Terrestre t1= new Terrestre();
+                t1.eatMeat(Animal.Food.MEAT);
+               penguin1.eatMeat(Animal.Food.MEAT);
 
                 Zoo zoo1 = new Zoo("Central Zoo", "Tunis");
 
@@ -68,7 +71,7 @@ public class Main {
         zoo1.displayAnimals();*/
             } catch (ZooFullException e){
                 System.out.println(e.getMessage());
-        }    catch (InvalidAgeExeception e) {
+        } catch (InvalidAgeExeception e) {
             System.out.println(e.getMessage());
         }
     }

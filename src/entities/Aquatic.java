@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class Aquatic extends Animal {
+public abstract class Aquatic extends Animal implements Carnivore<Animal.Food> {
     protected String habitat;
 
     public Aquatic(String family, String name, int age, boolean isMammal, String habitat) {
@@ -27,5 +27,12 @@ public abstract class Aquatic extends Animal {
 
 
         return false;
+    }
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT || meat == Food.BOTH) {
+            System.out.println("animal aquatique mange de la viande");
+        } else {
+            System.out.println("animal aquatique ne mange pas de la viande");
+        }
     }
 }
