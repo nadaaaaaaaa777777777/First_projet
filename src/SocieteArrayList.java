@@ -45,7 +45,7 @@ public class SocieteArrayList implements IGestion<Employe> {
 
     @Override
     public void trierEmployeParId() {
-        Collections.sort(listeEmployes, Comparator.comparingInt(Employe::getId));
+        Collections.sort(listeEmployes);
 
     }
 
@@ -54,7 +54,7 @@ public class SocieteArrayList implements IGestion<Employe> {
         Collections.sort(listeEmployes, Comparator
                 .comparing(Employe::getNom_departement)
                 .thenComparingInt(Employe::getGrade));
-
     }
+
 
 }

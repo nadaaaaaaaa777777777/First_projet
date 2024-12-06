@@ -1,7 +1,7 @@
-public class Employe {
+public class Employe  implements Comparable<Employe>  {
     private int id;
     private String nom;
-    private int prenom;
+    private String prenom;
     private String nom_departement;
     private int grade;
 
@@ -13,7 +13,7 @@ public class Employe {
         return nom;
     }
 
-    public int getPrenom() {
+    public String getPrenom() {
         return prenom;
     }
 
@@ -37,7 +37,7 @@ public class Employe {
         this.nom = nom;
     }
 
-    public void setPrenom(int prenom) {
+    public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
 
@@ -49,25 +49,40 @@ public class Employe {
         this.grade = grade;
     }
 
-    public Employe(int id, String nom, int prenom, String nom_departement, int grade) {
+    public Employe(int id, String nom, String prenom, String nom_departement, int grade) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.nom_departement = nom_departement;
         this.grade = grade;
     }
-
-    public boolean isequals(Object o) {
-        if (null == o) return false;
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) return false;
+        if (this == o) return true;
         if (o instanceof Employe employe) {
-            return id == employe.getId() && nom == employe.getNom();
+            return id == employe.getId() && nom.equals(employe.getNom()); // Compare ID et nom (avec .equals pour les chaînes)
         }
-        return  false;
+        return false;
     }
 
-    String tostring(){
-        return this.nom+" "+this.prenom+" "+this.nom_departement+" "+this.grade;
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", nom_departement='" + nom_departement + '\'' +
+                ", grade=" + grade +
+                '}';
     }
+    @Override
+    public int compareTo(Employe o){
+        return this.id-o.id;
+    }
+
+
+
 }
 
 
