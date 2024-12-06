@@ -14,7 +14,7 @@ public class Main {
         Departement d5= new Departement(1,"LL",8);
 
 
-      System.out.println("affchier le hashset de departement");
+        System.out.println("affchier le hashset de departement");
         affectationHashMap.ajouterEmployeDepartement(e1, d1);
         affectationHashMap.ajouterEmployeDepartement(e2, d2);
         affectationHashMap.ajouterEmployeDepartement(e3, d3);
@@ -42,7 +42,7 @@ public class Main {
         affectationHashMap.afficherEmployes();
 
 
-        }
+    }
 
 
 
@@ -53,3 +53,4 @@ public class Main {
 
 
 }
+
