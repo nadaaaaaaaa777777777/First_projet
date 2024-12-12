@@ -4,6 +4,7 @@ Bienvenue dans le projet de gestion d'animaux dans un zoo, d'employés dans une 
 
 ## Structure du Projet 🗂️
 
+```plaintext
 ZooManagement/
 |-- .gitignore
 |-- README.md
