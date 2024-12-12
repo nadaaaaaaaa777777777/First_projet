@@ -4,6 +4,52 @@ Bienvenue dans le projet de gestion d'animaux dans un zoo, d'employés dans une 
 
 ## Structure du Projet 🗂️
 
+```plaintext
+ZooManagement/
+|-- .gitignore
+|-- README.md
+|-- src/
+    |-- tn/
+        |-- esprit/
+            |-- gestionzoo/
+            |   |-- main/
+            |   |   |-- Main.java
+            |   |-- entities/
+            |       |-- Animal.java
+            |       |-- Aquatic.java
+            |       |-- Terrestrial.java
+            |       |-- Dolphin.java
+            |       |-- Penguin.java
+            |       |-- Zoo.java
+            |       |-- Food.java
+            |       |-- Carnivore.java
+            |       |-- Herbivore.java
+            |       |-- Omnivore.java
+            |       |-- ZooFullException.java
+            |       |-- InvalidAgeException.java
+            |-- gestionemployes/
+            |   |-- main/
+            |   |   |-- MainEmploye.java
+            |   |-- entities/
+            |       |-- Employe.java
+            |       |-- Departement.java
+            |   |-- interfaces/
+            |       |-- IGestion.java
+            |       |-- IDepartement.java
+            |   |-- implementations/
+            |       |-- SocieteArrayList.java
+            |       |-- DepartementHashSet.java
+            |-- gestionetudiants/
+                |-- main/
+                |   |-- MainEtudiant.java
+                |-- entities/
+                |   |-- Etudiant.java
+                |-- interfaces/
+                |   |-- Management.java
+                |-- implementations/
+                    |-- StudentManagement.java
+
+
 
            
 
@@ -59,6 +105,7 @@ Bienvenue dans le projet de gestion d'animaux dans un zoo, d'employés dans une 
    `git clone https://github.com/nadaaaaaaaa777777777/First_projet.git`
 2. Compilez le projet  utilisez un IDE comme IntelliJ IDEA 
 3. Exécutez les classes principales dans `src/main/` pour voir les fonctionnalités en action.
+<br>
 <br>
 ### ✨ Contributions
 Les contributions sont les bienvenues ! N'hésitez pas à soumettre des pull requests pour améliorer ce projet.
