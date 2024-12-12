@@ -5,50 +5,48 @@ Bienvenue dans le projet de gestion d'animaux dans un zoo, d'employés dans une 
 ## Structure du Projet 🗂️
 
 ZooManagement/
-├── .gitignore
-├── README.md
-└── src/
-    └── tn/
-        └── esprit/
-            ├── gestionzoo/
-            │   ├── main/
-            │   │   └── Main.java
-            │   ├── entities/
-            │   │   ├── Animal.java
-            │   │   ├── Aquatic.java
-            │   │   ├── Terrestrial.java
-            │   │   ├── Dolphin.java
-            │   │   ├── Penguin.java
-            │   │   ├── Zoo.java
-            │   │   ├── Food.java
-            │   │   ├── Carnivore.java
-            │   │   ├── Herbivore.java
-            │   │   ├── Omnivore.java
-            │   │   ├── ZooFullException.java
-            │   │   └── InvalidAgeException.java
-            │   
-            ├── gestionemployes/
-            │   ├── main/
-            │   │   └── MainEmploye.java
-            │   ├── entities/
-            │   │   ├── Employe.java
-            │   │   └── Departement.java
-            │   ├── interfaces/
-            │   │   ├── IGestion.java
-            │   │   └── IDepartement.java
-            │   └── implementations/
-            │       ├── SocieteArrayList.java
-            │       └── DepartementHashSet.java
-            │
-            └── gestionetudiants/
-                ├── main/
-                │   └── MainEtudiant.java
-                ├── entities/
-                │   └── Etudiant.java
-                ├── interfaces/
-                │   └── Management.java
-                └── implementations/
-                    └── StudentManagement.java
+|-- .gitignore  
+|-- README.md  
+|-- src/  
+    |-- tn/  
+        |-- esprit/  
+            |-- gestionzoo/  
+            |   |-- main/  
+            |   |   |-- Main.java  
+            |   |-- entities/  
+            |       |-- Animal.java  
+            |       |-- Aquatic.java  
+            |       |-- Terrestrial.java  
+            |       |-- Dolphin.java  
+            |       |-- Penguin.java  
+            |       |-- Zoo.java  
+            |       |-- Food.java  
+            |       |-- Carnivore.java  
+            |       |-- Herbivore.java  
+            |       |-- Omnivore.java  
+            |       |-- ZooFullException.java  
+            |       |-- InvalidAgeException.java  
+            |-- gestionemployes/  
+            |   |-- main/  
+            |   |   |-- MainEmploye.java  
+            |   |-- entities/  
+            |       |-- Employe.java  
+            |       |-- Departement.java  
+            |   |-- interfaces/  
+            |       |-- IGestion.java  
+            |       |-- IDepartement.java  
+            |   |-- implementations/  
+            |       |-- SocieteArrayList.java  
+            |       |-- DepartementHashSet.java  
+            |-- gestionetudiants/  
+                |-- main/  
+                |   |-- MainEtudiant.java  
+                |-- entities/  
+                |   |-- Etudiant.java  
+                |-- interfaces/  
+                |   |-- Management.java  
+                |-- implementations/  
+                    |-- StudentManagement.java 
 
 ## 📝 Prosit 3
 [Prosit 3 - Lien vers le code](https://github.com/nadaaaaaaaa777777777/First_projet/tree/prosit3)  
