@@ -111,5 +111,4 @@ ZooManagement/
 3. Exécutez les classes principales dans `src/main/` pour voir les fonctionnalités en action.  
 <br>
 
-### ✨ Contributions
-Les contributions sont les bienvenues ! N'hésitez pas à soumettre des pull requests pour améliorer ce projet.
+
